@@ -1,6 +1,12 @@
-var str = document.getElementById("string").innerHTML;
+function reverse() {
+  var str = document.getElementById("string");
+  reverseString(str.value);
+}
 
 function reverseString(str) {
-    var newstring = str.split("").reverse().join("");
-    document.getElementById("output").innerHTML = newstring;
+  var newstring = str
+    .split("")
+    .reverse()
+    .join("");
+  document.getElementById("output").innerHTML = newstring;
 }
