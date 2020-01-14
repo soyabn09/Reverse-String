@@ -9,4 +9,5 @@ function reverseString(str) {
     .reverse()
     .join("");
   document.getElementById("output").innerHTML = newstring;
+  document.getElementById("input").innerHTML = str;
 }
