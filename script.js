@@ -12,9 +12,9 @@ function reverseString(str) {
 }
 
 function copyText() {
-  var copyText = document.getElementById("output");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
+  var text = document.getElementById("output");
+  text.select();
+  text.setSelectionRange(0, 99999)
   document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
+  alert("Copied the text: " + text.value);
 }
