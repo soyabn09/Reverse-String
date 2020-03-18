@@ -11,10 +11,12 @@ function reverseString(str) {
   document.getElementById("input").innerHTML = str;
 }
 
-function copyText() {
-  var text = document.getElementById("output");
-  text.select();
-  text.setSelectionRange(0, 99999)
-  document.execCommand("copy");
-  alert("Copied the text: " + text.value);
+function copyElementText() {
+    var text = document.getElementById("output").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
 }
